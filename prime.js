@@ -24,3 +24,15 @@ function isPrime(num){
     	}
 	return true;
 }
+
+function genAllPrime(to){
+	var prime = new Array();
+	var index = 0;
+	for(var i = 2; i <= to; i++){
+		if(isPrime(i)){
+			prime[index] = i;
+			index++;
+    	}
+	}
+	return prime;
+}
