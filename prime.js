@@ -2,7 +2,7 @@ function genPrimeNum(){
 	while(true){
 		var rand = Math.round(Math.random() * 1000);
 		if(isPrime(rand)){
-		return rand;
+			return rand;
         	}
     	}
 }
@@ -19,8 +19,8 @@ function isPrime(num){
 	var sqr = Math.round(Math.sqrt(num));
 	for(var i = 2; i <= sqr; i++){
 		if(num % i == 0){
-		return false;
-        }
+			return false;
+        	}
     	}
 	return true;
 }
@@ -32,7 +32,7 @@ function genAllPrime(to){
 		if(isPrime(i)){
 			prime[index] = i;
 			index++;
-    	}
+    		}
 	}
 	return prime;
 }
