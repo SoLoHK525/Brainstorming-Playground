@@ -1,9 +1,11 @@
 function hextodec(num){
-	let result = 0;
+	let result = 0n;
 	let l = num.length;
     for(let i = 0; i < l; i++){
-		parseInt(num.charAt(l - 1 - i));
-		result += parseInt(num.charAt(l - 1 - i), 	16) * Math.pow(16, i);
+		let temp = 0n;
+		temp = BigInt(Math.pow(16, l - 1 - i));
+		temp = BigInt(parseInt(num.charAt(i), 	16)) * temp;
+		result += temp;
     }
 	return result;
 }
