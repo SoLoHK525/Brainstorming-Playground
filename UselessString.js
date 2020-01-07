@@ -6,3 +6,16 @@ function cap(str){
     }
 	return outputstr;
 }
+
+function discordBigText(str){
+    let result = "";
+    for(s in str){
+        let word = str[s];
+        if(/[a-zA-Z]/.test(word)){
+           result += `:regional_indicator_${word.toLowerCase()}: `;
+        }else if(word == " "){
+           result += "          ";
+        }
+    }
+    return result;
+}
